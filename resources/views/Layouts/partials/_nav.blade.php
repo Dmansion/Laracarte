@@ -12,9 +12,15 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="{{ route('home') }}">Home</a></li>
-        <li><a href="{{ route('about') }}">About</a></li>
-        <li><a href="{{ route('artisans') }}">Artisans</a></li>
+        <li class="{{ set_active_route('home') }}">
+          <a href="{{ route('home') }}" >Home</a>
+        </li>
+        <li class="{{ set_active_route('about') }}">
+          <a href="{{ route('about') }}">About</a>
+        </li>
+        <li class="{{ set_active_route('artisans') }}">
+          <a href="{{ route('artisans') }}">Artisans</a>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Planet <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -26,7 +32,9 @@
             <li><a target="_blank" href="http://larachat.co">Larachat</a></li>
           </ul>
         </li>
-        <li><a href="{{ route('contact') }}">Contact</a></li>
+        <li class="{{ set_active_route('contact') }}">
+          <a href="{{ route('contact') }}">Contact</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="">Login</a></li>
